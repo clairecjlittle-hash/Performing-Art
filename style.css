@@ -1,0 +1,430 @@
+/* ==========================================
+   PASTEL & CUTE PERSONAL WEBSITE
+   Color Palette: Soft pastels with cute vibes
+   ========================================== */
+
+/* ROOT VARIABLES - Easy to customize colors */
+:root {
+    --primary-color: #FFB6D9;      /* Pastel pink */
+    --secondary-color: #C7CEEA;    /* Pastel purple */
+    --accent-color: #B5EAD7;       /* Pastel mint */
+    --light-bg: #FFF5F7;           /* Very light pink */
+    --text-dark: #5A5A5A;          /* Soft dark gray */
+    --text-light: #8B8B8B;         /* Light gray */
+    --white: #FFFFFF;
+}
+
+/* ========== GENERAL STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ========== NAVIGATION BAR ========== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(255, 182, 217, 0.3);
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Mobile: Stack navigation */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.intro-text {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(199, 206, 234, 0.4);
+}
+
+/* Mobile: Adjust hero text size */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    .subtitle {
+        font-size: 1em;
+    }
+}
+
+/* ========== ABOUT ME SECTION ========== */
+.about {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-size: 1.05em;
+}
+
+.proud-box {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--white);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(181, 234, 215, 0.2);
+}
+
+.proud-box h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.proud-box p {
+    font-size: 1.2em;
+    color: var(--white);
+}
+
+/* Mobile: Stack grid */
+@media (max-width: 700px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== INTERESTS SECTION ========== */
+.interests {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--light-bg), var(--white));
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.interest-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(199, 206, 234, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--primary-color);
+}
+
+.interest-card:nth-child(2) {
+    border-top-color: var(--secondary-color);
+}
+
+.interest-card:nth-child(3) {
+    border-top-color: var(--accent-color);
+}
+
+.interest-card:nth-child(4) {
+    border-top-color: var(--primary-color);
+}
+
+.interest-card:nth-child(5) {
+    border-top-color: var(--secondary-color);
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(199, 206, 234, 0.3);
+}
+
+.interest-emoji {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.interest-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.interest-card p {
+    color: var(--text-light);
+    font-size: 0.95em;
+}
+
+/* ========== LEARNING SECTION ========== */
+.learning {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.learning-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.current-goal {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    padding: 40px;
+    border-radius: 15px;
+    color: var(--white);
+}
+
+.current-goal h3 {
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+.current-goal p {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.goal-description {
+    font-size: 0.95em;
+    opacity: 0.95;
+}
+
+.progress-section {
+    background-color: var(--light-bg);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.progress-section h3 {
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.learning-list {
+    list-style: none;
+}
+
+.learning-list li {
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.learning-list li:before {
+    content: "🌟";
+    position: absolute;
+    left: 0;
+}
+
+/* Mobile: Stack learning grid */
+@media (max-width: 700px) {
+    .learning-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    text-align: center;
+    color: var(--white);
+}
+
+.contact h2 {
+    color: var(--white);
+}
+
+.contact-intro {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.safety-note {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .about-content,
+    .learning-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+}
+
+/* ========== SMOOTH SCROLLING ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-in;
+}
