@@ -493,3 +493,20 @@ section {
 .contact {
     padding: 50px 20px 80px;
 }
+.progress-subsection {
+  margin-top: 14px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+}
+
+.progress-subsection h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.progress-subsection p {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
